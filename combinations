@@ -1,0 +1,93 @@
+i_binding_i_ref_of_i_data_type.method(Self)
+i_binding_i_ref_of_i_data_type.method(mut self)
+i_binding_i_ref_of_i_data_type.method(&self)
+i_binding_i_ref_of_i_data_type.method(&mut self)
+
+i_binding_i_ref_of_m_data_type.method(Self)
+i_binding_i_ref_of_m_data_type.method(mut self)
+i_binding_i_ref_of_m_data_type.method(&self)
+i_binding_i_ref_of_m_data_type.method(&mut self)
+
+i_binding_m_ref_of_i_data_type.method(Self)
+i_binding_m_ref_of_i_data_type.method(mut self)
+i_binding_m_ref_of_i_data_type.method(&self)
+i_binding_m_ref_of_i_data_type.method(&mut self)
+
+i_binding_m_ref_of_m_data_type.method(Self)
+i_binding_m_ref_of_m_data_type.method(mut self)
+i_binding_m_ref_of_m_data_type.method(&self)
+i_binding_m_ref_of_m_data_type.method(&mut self)
+================================================
+m_binding_i_ref_of_i_data_type.method(Self)
+m_binding_i_ref_of_i_data_type.method(mut self)
+m_binding_i_ref_of_i_data_type.method(&self)
+m_binding_i_ref_of_i_data_type.method(&mut self)
+
+m_binding_i_ref_of_m_data_type.method(Self)
+m_binding_i_ref_of_m_data_type.method(mut self)
+m_binding_i_ref_of_m_data_type.method(&self)
+m_binding_i_ref_of_m_data_type.method(&mut self)
+
+m_binding_m_ref_of_i_data_type.method(Self)
+m_binding_m_ref_of_i_data_type.method(mut self)
+m_binding_m_ref_of_i_data_type.method(&self)
+m_binding_m_ref_of_i_data_type.method(&mut self)
+
+m_binding_m_ref_of_m_data_type.method(Self)
+m_binding_m_ref_of_m_data_type.method(mut self)
+m_binding_m_ref_of_m_data_type.method(&self)
+m_binding_m_ref_of_m_data_type.method(&mut self)
+============================================
+
+/*
+  1. Bindings
+    1. Immutable Bindings
+    2. Mutable Bindings
+  2. Scopes
+    1. Current Scope
+    2. Inner Scope
+    3. Outer Scope
+  3. Calling Member functions on variables
+    1. Functions that accept by value
+    2. Functions that accept by shared reference
+    3. Functions that accept by mutable reference
+  4. Function Parameters
+    1.  Owned value
+      1. Call a function on that value which accepts by value
+      2. Call a function on that value which accepts by shared reference
+      3. Call a function on that value which accepts by mutable reference
+    2.  Shared reference
+      1. Call a function on that value which accepts by value
+      2. Call a function on that value which accepts by shared reference
+      3. Call a function on that value which accepts by mutable reference
+    3.  Mutable reference
+      1. Call a function on that value which accepts by value
+      2. Call a function on that value which accepts by shared reference
+      3. Call a function on that value which accepts by mutable reference
+  4. Calling Functions on
+    1. Owned values
+      1. That accept by value
+      2. That accept by shared reference
+      3. That accept by mutable reference
+    2. Shared Reference values
+      1. That accept by value
+      2. That accept by shared reference
+      3. That accept by mutable reference
+    3. Mutable reference values
+      1. That accept by value
+      2. That accept by shared reference
+      3. That accept by mutable reference
+  5. Closures
+  6. Pattern Matching
+  7. Lifetimes
+  8. Data Types
+    1. Immutable Data Types
+    2. Mutable Data Types
+  9. References in
+    1. Structs
+    2. Function parameters
+    3. Function return values
+  10. Allocation
+    1. Copy
+    2. Move
+*/
