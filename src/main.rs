@@ -76,4 +76,66 @@ fn main() {
       sample.owned();
     }
   }
+
+  {
+    {
+      let sample = Sample { key: 1 };
+      taking_owned_sample(sample);
+      // cannot use below calls because value has been moved
+      // taking_owned_sample(sample);
+      // taking_shared_sample(sample);
+      // taking_mutable_sample(sample);
+    }
+    {
+      let sample = Sample { key: 1 };
+      taking_shared_sample(&sample);
+      taking_shared_sample(&sample);
+      // taking_mutable_sample(&mut sample);
+      // taking_mutable_sample(&mut sample);
+      taking_owned_sample(sample);
+    }
+    {
+      let sample = Sample { key: 1 };
+      // Not at all possible
+      // taking_mutable_sample(&mut sample)
+    }
+  }
+
+  {
+    {
+      let mut sample = Sample { key: 1 };
+      taking_owned_sample(sample);
+      // cannot use below calls because value has been moved
+      // taking_owned_sample(sample);
+      // taking_shared_sample(sample);
+      // taking_mutable_sample(sample);
+    }
+    {
+      let mut sample = Sample { key: 1 };
+      taking_shared_sample(&sample);
+      taking_shared_sample(&sample);
+      taking_mutable_sample(&mut sample);
+      taking_mutable_sample(&mut sample);
+      taking_owned_sample(sample);
+    }
+    {
+      let mut sample = Sample { key: 1 };
+      taking_shared_sample(&sample);
+      taking_shared_sample(&sample);
+      taking_owned_sample(sample);
+      // taking_mutable_sample(&mut sample);
+      // taking_mutable_sample(&mut sample);
+    }
+    {
+      let mut sample = Sample { key: 1 };
+      // Not at all possible
+      taking_mutable_sample(&mut sample);
+      taking_shared_sample(&sample);
+      taking_shared_sample(&sample);
+      taking_owned_sample(sample);      
+    }
+  }
 }
+fn taking_owned_sample(sample:Sample){}
+fn taking_shared_sample(sample:&Sample){}
+fn taking_mutable_sample(sample:&mut Sample){}
